@@ -1,0 +1,5 @@
+<!-- Add New Entity Type -->
+<h1>Add new Entity Type</h1><%= form_tag :action => 'create' do %>
+<p><label for = "entity_type_name">Name</label>:<%= text_field 'entity_types', 'name' %></p>
+<%= submit_tag "Create" %><% end -%>
+<%= link_to 'Back', {:action => 'list'} %>
