@@ -6,4 +6,8 @@ class SentencesController < ApplicationController
     def show
         @sentence = Sentence.find(params[:id])
     end
+
+    def destroy
+        EntityType.destroy!(params[:id])
+    end
 end

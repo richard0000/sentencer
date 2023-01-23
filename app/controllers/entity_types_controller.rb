@@ -6,4 +6,8 @@ class EntityTypesController < ApplicationController
     def show
         @entity_type = EntityType.find(params[:id])
     end
+
+    def destroy
+        EntityType.destroy!(params[:id])
+    end
 end

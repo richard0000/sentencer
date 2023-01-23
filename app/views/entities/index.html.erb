@@ -1,7 +1,7 @@
 <!-- Shows list of Entities and Types -->
 <ul id = "entities">
    <% @entities.each do |c| %>
-   <li><%= link_to c.name, :action => "show_entities", :id => c.id %></li>
+   <li><%= link_to c.text, :action => "show", :id => c.id %></li>
    <% end %>
 </ul><% if @entities.blank? %>
 <p>There are not any Entities currently in the system.</p>
@@ -11,7 +11,7 @@
    <li>
    <%= link_to c.text, {:action => 'show', :id => c.id} -%>
    <b> <%= link_to 'Edit', {:action => 'edit', :id => c.id} %></b>
-   <b> <%= link_to "Delete", {:action => 'delete', :id => c.id},
+   <b> <%= link_to "Delete", {:action => 'destroy', :id => c.id},
       :confirm => "Are you sure you want to delete this item?" %></b>
 </li>
    <% end %>

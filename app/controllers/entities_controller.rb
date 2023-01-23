@@ -6,4 +6,8 @@ class EntitiesController < ApplicationController
     def show
         @entity = Entity.show(params[:id])
     end
+
+    def destroy
+        Entity.destroy!(params[:id])
+    end
 end
