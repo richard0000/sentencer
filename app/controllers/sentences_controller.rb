@@ -1,9 +1,9 @@
 class SentencesController < ApplicationController
     def index
-        Sentence.all
+        @sentences = Sentence.all
     end
 
     def show
-        Sentence.find(params[:id])
+        @sentence = Sentence.find(params[:id])
     end
 end

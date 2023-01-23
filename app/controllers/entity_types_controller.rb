@@ -1,9 +1,9 @@
 class EntityTypesController < ApplicationController
     def index
-        EntityType.all
+        @entity_types = EntityType.all
     end
 
     def show
-        EntityType.find(params[:id])
+        @entity_type = EntityType.find(params[:id])
     end
 end

@@ -1,0 +1,9 @@
+<!-- Show Entity -->
+<h1><%= @entity.text %></h1>
+<p>
+   <strong>Text: </strong> $<%= @entity.text %><br />
+   <strong>Type: </strong> $<%= @entity.entity_type.name %><br />
+   <strong>Created Date:</strong> <%= @entity.created_at %><br />
+</p>
+<hr />
+<%= link_to 'Back', {:action => 'list'} %>
